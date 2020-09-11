@@ -44,6 +44,8 @@ class service {
       params.offset = limit * (page - 1);
     }
 
+    console.log(params);
+
     // Return promise
     return this.restclient
       .get("v1/public/characters", {

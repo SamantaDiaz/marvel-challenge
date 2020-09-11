@@ -35,6 +35,10 @@ function renderHeroesList(characters) {
 
 // Charge paginator
 function loadPaginator(totalResults, pageNumber) {
+  const url_string = window.location.href;
+  const url = new URL(url_string);
+  const query = url.searchParams.get("query");
+
   $("#pagination").pagination({
     dataSource: function (done) {
       // make an array pushing for each turn of the for (the array uses it to make each page)
@@ -50,7 +54,11 @@ function loadPaginator(totalResults, pageNumber) {
     pageNumber,
 
     beforePageOnClick: (event, value) => {
-      window.location.href = "?page=" + value;
+      if (query) {
+        window.location.href = `?query=${query}&page=${value}`;
+      } else {
+        window.location.href = `?page=${value}`;
+      }
     },
   });
 }
@@ -90,10 +98,11 @@ $(document).ready(() => {
   const query = url.searchParams.get("query");
   let baseUrl = "/api/search";
 
-  if (query) {
+  if (query && page) {
+    baseUrl += `?query=${query}&page=${page}`;
+  } else if (query) {
     baseUrl += "?query=" + query;
-  }
-  if (page) {
+  } else if (page) {
     baseUrl += "?page=" + page;
   }
 

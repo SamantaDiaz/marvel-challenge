@@ -22,6 +22,7 @@ router.get("/search", async function (req, res) {
   const service = new marvelService();
 
   try {
+    console.log(query, page);
     const result = await service.searchCharacters(query, page);
     res.status(200).json(result.data);
   } catch (error) {
