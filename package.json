@@ -6,10 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
+    "start": "node server.js",
     "lint:fix": "eslint --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Samanta Diaz",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
