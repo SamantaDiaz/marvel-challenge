@@ -1,0 +1,156 @@
+.text-intro {
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.text-intro {
+  font-size: 4em;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+#intro {
+  background-color: #111;
+  background-image: radial-gradient(#333, #111);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  overflow: hidden;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+}
+
+#intro span {
+  display: block;
+  font-size: .4em;
+  opacity: .8;
+}
+
+#intro p {
+  position: fixed;
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  -webkit-animation: switch 20s linear;
+          animation: switch 20s linear;
+}
+
+#intro p:nth-child(2) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#intro p:nth-child(3) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+@-webkit-keyframes switch {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+    -webkit-transform: scale(12);
+            transform: scale(12);
+  }
+  3% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  13% {
+    opacity: 0;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes switch {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+    -webkit-transform: scale(12);
+            transform: scale(12);
+  }
+  3% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  13% {
+    opacity: 0;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#intro.hidden-section {
+  display: none;
+}
+
+.show-button {
+  display: block;
+}
+
+.hidden-button {
+  display: none;
+}
+/*# sourceMappingURL=intro.css.map */

@@ -1,0 +1,68 @@
+@import './_variables.scss';
+
+.search-section {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.search-group {
+  display: flex;
+  // position: relative;
+}
+
+.search-input {
+  color: $tertiary;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-family: $font-principal;
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+  padding: 0.3rem 0.8rem;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $marvel-color;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: $marvel-color;
+    }
+  }
+
+}
+
+.search-icon {
+  width: 5rem;
+  border: 1px solid #ccc;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+}
+
+.error-search {
+  text-align: end;
+  color: $marvel-color;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.show-error {
+  display: block;
+}
+
+// MEDIAS SEARCH
+@media screen and (max-width:850px) {
+  .search-input {
+    font-size: 1rem;
+  }
+}

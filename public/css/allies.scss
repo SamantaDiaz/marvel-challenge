@@ -1,0 +1,109 @@
+@import './_variables.scss';
+
+#allies-container {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.title-page {
+  text-align: center;
+}
+
+.container-no-allies {
+  width: 50%;
+  margin: 2rem auto;
+  background-color: #cccccc45;
+  border-radius: 0.5rem;
+}
+
+.msg-no-allies {
+  margin: 1rem 1rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: $tertiary;
+  text-transform: none;
+  font-weight: 200;
+  font-family: $font-principal;
+}
+
+// allies list
+.ally-container {
+  display: flex;
+  border: 1px solid $tertiary;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0;
+  height: 15rem;
+}
+
+.image-container,
+.dismiss-button-container,
+.name-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.allies-button {
+  display: inline;
+  padding: 1.5rem;
+  color: $primary;
+  font-size: 1.2rem;
+  border: 2px solid $primary;
+
+  &:hover {
+    color: $secondary
+  }
+}
+
+.text-button {
+  display: inline;
+}
+
+.icon-button-ally {
+  margin-right: 0.5rem;
+}
+
+.hero-image {
+  border-radius: 0.4rem;
+  object-fit: cover;
+  object-position: center center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+//medias 
+@media screen and (max-width:850px) {
+  .container-no-allies {
+    width: auto;
+  }
+
+  .msg-no-allies {
+    font-size: 1.3rem;
+  }
+
+  .ally-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .name-container {
+    margin: 1rem 0;
+  }
+
+  .name-hero {
+    text-align: center;
+  }
+
+  .allies-button {
+    transition: none;
+  }
+
+  .hero-image {
+    height: 13rem;
+    width: 100%;
+  }
+}

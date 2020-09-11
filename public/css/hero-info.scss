@@ -1,0 +1,78 @@
+@import './_variables.scss';
+
+#hero-container {
+  width: 80%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  height: 72vh;
+}
+
+.info-container {
+  width: 100%;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.hero-description {
+  text-transform: none;
+  line-height: 2;
+  text-align: justify;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  border-radius: 0.4rem;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.allies-button {
+  display: inline;
+  padding: 1.5rem;
+  color: $primary;
+  font-size: 1.2rem;
+  border: 2px solid $primary;
+
+  &:hover {
+    color: $secondary
+  }
+}
+
+.dismiss-ally {
+  background-color: $marvel-color;
+  color: $secondary;
+  border: none;
+}
+
+// MEDIAS HEADER
+@media screen and (max-width:850px) {
+  #hero-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .info-container {
+    order: 2;
+    margin: 0;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+}

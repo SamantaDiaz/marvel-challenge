@@ -1,0 +1,105 @@
+@import'./_variables.scss';
+
+.text-intro {
+  font-weight: bold;
+  color: $secondary;
+  text-align: center;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+.text-intro {
+  font-size: 4em;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+#intro {
+  background-color: #111;
+  background-image: radial-gradient(#333, #111);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $secondary;
+  text-align: center;
+  font-weight: 700;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+}
+
+#intro span {
+  display: block;
+  font-size: .4em;
+  opacity: .8;
+}
+
+#intro p {
+  position: fixed;
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  animation: switch 20s linear;
+}
+
+#intro p:nth-child(2) {
+  animation-delay: 4s
+}
+
+#intro p:nth-child(3) {
+  animation-delay: 8s
+}
+
+@keyframes switch {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(12)
+  }
+
+  3% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1)
+  }
+
+  10% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(.9)
+  }
+
+  13% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(.1)
+  }
+
+  80% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}
+
+#intro.hidden-section {
+  display: none;
+}
+
+.show-button {
+  display: block;
+}
+
+.hidden-button {
+  display: none;
+}

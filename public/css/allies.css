@@ -1,0 +1,117 @@
+#allies-container {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.title-page {
+  text-align: center;
+}
+
+.container-no-allies {
+  width: 50%;
+  margin: 2rem auto;
+  background-color: #cccccc45;
+  border-radius: 0.5rem;
+}
+
+.msg-no-allies {
+  margin: 1rem 1rem;
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #8a8a8a;
+  text-transform: none;
+  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+}
+
+.ally-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #8a8a8a;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0;
+  height: 15rem;
+}
+
+.image-container,
+.dismiss-button-container,
+.name-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allies-button {
+  display: inline;
+  width: 80%;
+  padding: 1.5rem;
+  color: #000;
+  font-size: 1.2rem;
+  border: 2px solid #000;
+}
+
+.allies-button:hover {
+  color: #fff;
+}
+
+.text-button {
+  display: inline;
+}
+
+.icon-button-ally {
+  margin-right: 0.5rem;
+}
+
+.hero-image {
+  border-radius: 0.4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  .container-no-allies {
+    width: auto;
+  }
+  .msg-no-allies {
+    font-size: 1.3rem;
+  }
+  .ally-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .name-container {
+    margin: 1rem 0;
+  }
+  .name-hero {
+    text-align: center;
+  }
+  .allies-button {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .hero-image {
+    height: 13rem;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=allies.css.map */

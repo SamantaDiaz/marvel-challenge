@@ -1,0 +1,151 @@
+@import './_variables.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: $font-principal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// Header 
+.background {
+  background-color: $primary;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  width: 15%;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.container-link-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+.link-item {
+  list-style: none;
+}
+
+li a.link-nav {
+  list-style: none;
+}
+
+a.link-nav {
+  color: $secondary;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.4rem;
+  background: linear-gradient(to right, $marvel-color 50%, #ec1d2400 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background-position: left bottom;
+  }
+}
+
+.menu-mobile-container {
+  display: none;
+}
+
+// MEDIAS HEADER
+@media screen and (max-width:850px) {
+  .container {
+    width: 90%;
+    padding-bottom: 1rem;
+  }
+
+  .logo-container {
+    width: 35%;
+  }
+
+  .menu-mobile-container {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  #icon {
+    color: $secondary;
+    font-size: 1.5rem;
+  }
+
+  #container-link.show-menu {
+    display: flex;
+  }
+
+  .container-link-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    margin: 1rem 0 0;
+  }
+
+  .link-item {
+    line-height: 2;
+
+    &:first-child {
+      border-bottom: 1px solid $secondary;
+    }
+  }
+
+  a.link-nav {
+    font-size: 1rem;
+    padding: 0;
+    transition: none;
+    background: $primary
+  }
+}
+
+//buttons
+.button {
+  padding: 2rem 4rem;
+  background-color: $marvel-color;
+  color: $secondary;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 3px solid $secondary;
+  border-radius: 0.4rem;
+  background: linear-gradient(to right, $marvel-color 50%, #ec1d2400 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  z-index: 10;
+
+  &:hover {
+    cursor: pointer;
+    background-position: left bottom;
+    border: none;
+  }
+
+}
